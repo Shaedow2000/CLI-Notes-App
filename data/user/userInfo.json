@@ -1,0 +1,9 @@
+{
+  "User": {
+    "first_time": true,
+    "name": {
+      "firstname": "",
+      "secondname": ""
+    }
+  }
+}
