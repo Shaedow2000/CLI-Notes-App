@@ -28,7 +28,7 @@ def add_user():
         last_name: str = input( '- last name (optional):' )
     
         if frst_name.replace( ' ', '' ) != '':
-            print( f'Hello { frst_name } { last_name }...' )
+            print( f'Hello { frst_name } { last_name } !' )
             break
         else:
             print( '!> Please enter a first name...' )
