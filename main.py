@@ -1,6 +1,5 @@
 # imports from Module/ directory
 from modules.first_time_user.functions import add_user, check_first_time
-from modules.read_Json.read import readFile
 
 # main function
 def main():

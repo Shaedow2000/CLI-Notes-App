@@ -1,11 +1,12 @@
-from modules.read_Json.read import readFile
+from data.global_py.variables import json_file
+from modules.Json.read import readFile
 
 def check_first_time() -> bool:
     """
     return is the user first time using this app.
     """
 
-    data = readFile( 'user/userInfo.json' )
+    data = readFile( json_file )
     data = data.get( 'User' )
 
     first_time = data.get( 'first_time' )
@@ -25,10 +26,13 @@ def add_user():
     
     while True:
         frst_name: str = input( '- enter a first name: ' )
-        last_name: str = input( '- last name (optional):' )
+        last_name: str = input( '- last name (optional): ' )
     
         if frst_name.replace( ' ', '' ) != '':
             print( f'Hello { frst_name } { last_name } !' )
+            
+            data = readFile( json_file ).get( 'User' )
+
             break
         else:
             print( '!> Please enter a first name...' )

@@ -4,8 +4,6 @@ import os
 def readFile( path: str ) -> dict:
     """
     return the data contained inside a given json file.
-    :param path:
-    :return:
     """
 
     dir: str = os.path.dirname( __file__ )
