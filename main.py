@@ -1,6 +1,8 @@
 # imports from Module/ directory
 from modules.first_time_user.functions import add_user, check_first_time
 from data.global_py.variables import menu
+import time
+import os
 
 # main function
 def main():
@@ -8,9 +10,26 @@ def main():
     main function of the program.
     """
 
+    print( menu )
+
     while True:
-        print( menu )
-        choice: str = input( '=> ' )
+        choice: str = input( '=> ' ).replace( ' ', '' ).lower()
+
+        if choice == 'q':
+            print( '-> Exiting...' )
+            time.sleep( 0.5 )
+            break
+        elif choice == 'c':
+            os.system( 'cls' if os.name == 'nt' else 'clear' )
+            print( menu )
+        elif choice == '1':
+            print( 'create note' )
+        elif choice == '2':
+            print( 'read note' )
+        elif choice == '3':
+            print( 'show notes' )
+        elif choice == '4':
+            print( 'delete note' )
 
 
 # the program starts here
