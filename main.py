@@ -1,5 +1,6 @@
 # imports from Module/ directory
 from modules.first_time_user.functions import add_user, check_first_time
+from data.global_py.variables import menu
 
 # main function
 def main():
@@ -8,7 +9,7 @@ def main():
     """
 
     while True:
-        print( 'later...' )
+        print( menu )
         break
 
 
