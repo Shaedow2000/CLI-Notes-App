@@ -40,12 +40,12 @@ def add_user():
             data = changeData( data, 'first_time', False )
             writeFile( json_file, data )
            
-            print( f'>> Hello { frst_name } { last_name } !' )
-            print( '!> NOTE: write the command in the "=>" !' )
-
             time.sleep( 0.75 )
             os.system( 'cls' if os.name == 'nt' else 'clear' ) 
 
+            print( f'>> Hello { frst_name } { last_name } !' )
+            print( '!> NOTE: write the command in the "=>" !' )
+            
             break
         else:
             print( '!> Please enter a first name...' )
