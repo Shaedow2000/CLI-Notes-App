@@ -30,7 +30,10 @@ def main():
             print( 'show notes' )
         elif choice == '4':
             print( 'delete note' )
-
+        elif choice == '':
+            continue 
+        else:
+            print( f'!>> ERROR: unknown command [ { choice } ]. Please enter one of the known commands.' )
 
 # the program starts here
 if __name__ == '__main__':
