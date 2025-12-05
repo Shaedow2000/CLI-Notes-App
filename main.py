@@ -5,16 +5,17 @@ from modules.first_time_user.functions import add_user, check_first_time
 def main():
     """
     main function of the program.
-    :return:
     """
 
     while True:
-        pass
+        print( 'later...' )
+        break
 
 
 # the program starts here
 if __name__ == '__main__':
     if check_first_time():
-        add_user() 
+        add_user()
+        main()
     else:
         main()

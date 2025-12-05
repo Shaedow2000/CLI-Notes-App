@@ -1,5 +1,7 @@
 from data.global_py.variables import json_file
 from modules.Json.read import readFile
+import time
+import os
 
 def check_first_time() -> bool:
     """
@@ -31,7 +33,8 @@ def add_user():
         if frst_name.replace( ' ', '' ) != '':
             print( f'Hello { frst_name } { last_name } !' )
             
-            data = readFile( json_file ).get( 'User' )
+            time.sleep( 1.5 )
+            os.system( 'cls' if os.name == 'nt' else 'clear' ) 
 
             break
         else:
