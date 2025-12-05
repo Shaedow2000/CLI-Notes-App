@@ -1,5 +1,7 @@
+import json
 from data.global_py.variables import json_file
 from modules.Json.read import readFile
+from modules.Json.writeFile import changeData, writeFile
 import time
 import os
 
@@ -9,7 +11,6 @@ def check_first_time() -> bool:
     """
 
     data = readFile( json_file )
-    data = data.get( 'User' )
 
     first_time = data.get( 'first_time' )
 
@@ -31,11 +32,14 @@ def add_user():
         last_name: str = input( '- last name (optional): ' )
     
         if frst_name.replace( ' ', '' ) != '':
-            print( f'Hello { frst_name } { last_name } !' )
-            
+            data: dict = readFile( json_file )
+            data = changeData( data, 'firstname', frst_name )
+            data = changeData( data, 'lastname', last_name )
+            writeFile( json_file, data )
             time.sleep( 1.5 )
             os.system( 'cls' if os.name == 'nt' else 'clear' ) 
 
+            print( f'Hello { frst_name } { last_name } !' )
             break
         else:
             print( '!> Please enter a first name...' )
