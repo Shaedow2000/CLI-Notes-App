@@ -1,4 +1,3 @@
-import json
 from data.global_py.variables import json_file
 from modules.Json.read import readFile
 from modules.Json.writeFile import changeData, writeFile
@@ -28,18 +27,20 @@ def add_user():
     print( '>> Welcome to the CLI note taking app !!' )
     
     while True:
-        frst_name: str = input( '- enter a first name: ' )
-        last_name: str = input( '- last name (optional): ' )
+        frst_name: str = input( '-> enter a first name: ' )
+        last_name: str = input( '-> last name (optional): ' )
     
         if frst_name.replace( ' ', '' ) != '':
             data: dict = readFile( json_file )
             data = changeData( data, 'firstname', frst_name )
             data = changeData( data, 'lastname', last_name )
+            data = changeData( data, 'first_time', False )
             writeFile( json_file, data )
-            time.sleep( 1.5 )
+            
+            time.sleep( 0.75 )
             os.system( 'cls' if os.name == 'nt' else 'clear' ) 
 
-            print( f'Hello { frst_name } { last_name } !' )
+            print( f'>> Hello { frst_name } { last_name } !' )
             break
         else:
             print( '!> Please enter a first name...' )
