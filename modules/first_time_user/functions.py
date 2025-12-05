@@ -27,20 +27,24 @@ def add_user():
     print( '>> Welcome to the CLI note taking app !!' )
     
     while True:
-        frst_name: str = input( '-> enter a first name: ' )
-        last_name: str = input( '-> last name (optional): ' )
+        _frst_name: str = input( '-> enter a first name: ' )
+        _last_name: str = input( '-> last name (optional): ' )
     
+        frst_name: str = _frst_name.replace( ' ', '' ).capitalize()
+        last_name: str = _last_name.replace( ' ', '' ).capitalize()
+
         if frst_name.replace( ' ', '' ) != '':
             data: dict = readFile( json_file )
             data = changeData( data, 'firstname', frst_name )
             data = changeData( data, 'lastname', last_name )
             data = changeData( data, 'first_time', False )
             writeFile( json_file, data )
-            
+           
+            print( f'>> Hello { frst_name } { last_name } !' )
+
             time.sleep( 0.75 )
             os.system( 'cls' if os.name == 'nt' else 'clear' ) 
 
-            print( f'>> Hello { frst_name } { last_name } !' )
             break
         else:
             print( '!> Please enter a first name...' )
