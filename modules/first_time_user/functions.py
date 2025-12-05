@@ -41,6 +41,7 @@ def add_user():
             writeFile( json_file, data )
            
             print( f'>> Hello { frst_name } { last_name } !' )
+            print( '!> NOTE: write the command in the "=>" !' )
 
             time.sleep( 0.75 )
             os.system( 'cls' if os.name == 'nt' else 'clear' ) 

@@ -10,7 +10,7 @@ def main():
 
     while True:
         print( menu )
-        break 
+        choice: str = input( '=> ' )
 
 
 # the program starts here
