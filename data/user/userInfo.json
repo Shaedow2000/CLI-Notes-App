@@ -2,10 +2,5 @@
     "first_time": false,
     "firstname": "Amir",
     "lastname": "Saliola",
-    "notes": {
-        "0": {
-            "title": "TEST",
-            "text": "TEXT"
-        }
-    }
+    "notes": {}
 }

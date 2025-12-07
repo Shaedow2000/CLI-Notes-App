@@ -25,19 +25,22 @@ def main():
             os.system( 'cls' if os.name == 'nt' else 'clear' )
             print( menu )
         elif choice == '1':
-            id: int = 0
             title: str = input( '--> Title: ' )
             text: str = input( '--> Text: ' )
 
             notes: dict = readFile( json_file )[ 'notes' ]
 
-            keys = notes.keys()
-            # max = max( keys )
-            print(keys)
-            print('still fixing')
+            keys_dict = notes.keys()
+            keys: list = [ int( number ) for number in keys_dict ]
+            keys.sort()
 
-            # fixing shit
+            if not keys:
+                max: int = 0
+            else:
+                max: int = keys[ -1 ]
 
+            id: int = max + 1
+            
             create_note( id, title, text )
         elif choice == '2':
             print( 'read note' )
