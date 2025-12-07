@@ -4,7 +4,9 @@ from modules.first_time_user.functions import add_user, check_first_time
 from data.global_py.variables import menu, json_file
 from modules.functions.create_note import create_note
 import time
-import os 
+import os
+
+from modules.functions.read_note import read_note 
 
 # main function
 def main():
@@ -43,7 +45,8 @@ def main():
             
             create_note( id, title, text )
         elif choice == '2':
-            print( 'read note' )
+            read_id: str = input( '--> id: ' )
+            print( read_note( int(read_id) ) ) 
         elif choice == '3':
             print( 'show notes' )
         elif choice == '4':
