@@ -6,7 +6,8 @@ from modules.functions.create_note import create_note
 import time
 import os
 
-from modules.functions.read_note import read_note 
+from modules.functions.read_note import read_note
+from modules.functions.show_notes import show_all 
 
 # main function
 def main():
@@ -45,10 +46,11 @@ def main():
             
             create_note( id, title, text )
         elif choice == '2':
-            read_id: str = input( '--> id: ' )
+            print( show_all() )
+            read_id: str = input( '--> Number of the note: ' )
             print( read_note( int(read_id) ) ) 
         elif choice == '3':
-            print( 'show notes' )
+            print( show_all() ) 
         elif choice == '4':
             print( 'delete note' )
         elif choice == '':
