@@ -24,6 +24,8 @@ def main():
             print( menu )
         elif choice == '1':
             print( 'create note' )
+            notecreation = input( 'Enter note content: ' )
+            print( f'Note created: { notecreation }' )
         elif choice == '2':
             print( 'read note' )
         elif choice == '3':
