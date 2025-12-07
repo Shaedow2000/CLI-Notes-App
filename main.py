@@ -76,7 +76,11 @@ if __name__ == '__main__':
     else:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         main()
+=======
+        main()
+>>>>>>> Stashed changes
 =======
         main()
 >>>>>>> Stashed changes
