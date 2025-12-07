@@ -6,6 +6,7 @@ from modules.functions.create_note import create_note
 import time
 import os
 
+from modules.functions.delete_note import delete_note
 from modules.functions.read_note import read_note
 from modules.functions.show_notes import show_all 
 
@@ -59,10 +60,11 @@ def main():
                     print( f'!> There is no note with the id: { read_id }' )
             else:
                 print( f'!> { read_id } is not found. Enter the number of a note.' )
+                continue
         elif choice == '3':
             show_all() 
         elif choice == '4':
-            print( 'delete note' )
+            delete_note() 
         elif choice == '':
             continue 
         else:
