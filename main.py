@@ -46,11 +46,11 @@ def main():
             
             create_note( id, title, text )
         elif choice == '2':
-            print( show_all() )
+            show_all()
             read_id: str = input( '--> Number of the note: ' )
             print( read_note( int(read_id) ) ) 
         elif choice == '3':
-            print( show_all() ) 
+            show_all() 
         elif choice == '4':
             print( 'delete note' )
         elif choice == '':
