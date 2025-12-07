@@ -30,20 +30,7 @@ def main():
         elif choice == '1':
             create_note()
         elif choice == '2':
-            show_all()
-            read_id: str | int = input( '--> Number of the note: ' )
-
-            if read_id.isdigit():
-                try:
-                    read_id = int( read_id )
-                    note = read_note( read_id )
-                
-                    print( note )
-                except KeyError:
-                    print( f'!> There is no note with the id: { read_id }' )
-            else:
-                print( f'!> { read_id } is not found. Enter the number of a note.' )
-                continue
+            read_note()
         elif choice == '3':
             show_all() 
         elif choice == '4':
