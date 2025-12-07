@@ -9,8 +9,6 @@ from modules.functions.show_notes import show_all
 import time
 import os
 
-
-
 # main function
 def main():
     """
@@ -57,8 +55,9 @@ def main():
 
 # the program starts here
 if __name__ == '__main__':
+
     if check_first_time():
         add_user()
-        main()
-    else:
-        main()
+    
+    main()
+
