@@ -47,8 +47,15 @@ def main():
             create_note( id, title, text )
         elif choice == '2':
             show_all()
-            read_id: str = input( '--> Number of the note: ' )
-            print( read_note( int(read_id) ) ) 
+            read_id: str | int = input( '--> Number of the note: ' )
+
+            if read_id.isdigit():
+                read_id = int( read_id )
+                note = read_note( read_id )
+                
+                print( note )
+            else:
+                print( f'!> { read_id } is not found. Enter the number of a note.' )
         elif choice == '3':
             show_all() 
         elif choice == '4':
