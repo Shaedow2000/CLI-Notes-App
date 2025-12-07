@@ -3,12 +3,13 @@ from modules.Json.read import readFile
 from modules.first_time_user.functions import add_user, check_first_time
 from data.global_py.variables import menu, json_file
 from modules.functions.create_note import create_note
-import time
-import os
-
 from modules.functions.delete_note import delete_note
 from modules.functions.read_note import read_note
 from modules.functions.show_notes import show_all 
+import time
+import os
+
+
 
 # main function
 def main():
