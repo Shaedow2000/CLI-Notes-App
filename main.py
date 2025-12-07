@@ -59,5 +59,8 @@ if __name__ == '__main__':
     if check_first_time():
         add_user()
     
-    main()
-
+    try:
+        main()
+    except KeyboardInterrupt:
+        print( '\n--> Exiting...' )
+        time.sleep( 0.5 )
