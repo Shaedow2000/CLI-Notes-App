@@ -50,10 +50,13 @@ def main():
             read_id: str | int = input( '--> Number of the note: ' )
 
             if read_id.isdigit():
-                read_id = int( read_id )
-                note = read_note( read_id )
+                try:
+                    read_id = int( read_id )
+                    note = read_note( read_id )
                 
-                print( note )
+                    print( note )
+                except KeyError:
+                    print( f'!> There is no note with the id: { read_id }' )
             else:
                 print( f'!> { read_id } is not found. Enter the number of a note.' )
         elif choice == '3':
