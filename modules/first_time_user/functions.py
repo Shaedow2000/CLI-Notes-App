@@ -24,29 +24,32 @@ def add_user():
     add user name and info to the json file.
     """
 
-    print( '>> Welcome to the CLI note taking app !!' )
+    try:
+        print( '>> Welcome to the CLI note taking app !!' )
     
-    while True:
-        _frst_name: str = input( '-> enter a first name: ' )
-        _last_name: str = input( '-> last name (optional): ' )
+        while True:
+            _frst_name: str = input( '-> enter a first name: ' )
+            _last_name: str = input( '-> last name (optional): ' )
     
-        frst_name: str = _frst_name.replace( ' ', '' ).capitalize()
-        last_name: str = _last_name.replace( ' ', '' ).capitalize()
+            frst_name: str = _frst_name.replace( ' ', '' ).capitalize()
+            last_name: str = _last_name.replace( ' ', '' ).capitalize()
 
-        if frst_name.replace( ' ', '' ) != '':
-            data: dict = readFile( json_file )
-            data = changeData( data, 'firstname', frst_name )
-            data = changeData( data, 'lastname', last_name )
-            data = changeData( data, 'first_time', False )
-            writeFile( json_file, data )
+            if frst_name.replace( ' ', '' ) != '':
+                data: dict = readFile( json_file )
+                data = changeData( data, 'firstname', frst_name )
+                data = changeData( data, 'lastname', last_name )
+                data = changeData( data, 'first_time', False )
+                writeFile( json_file, data )
            
-            time.sleep( 0.75 )
-            os.system( 'cls' if os.name == 'nt' else 'clear' ) 
+                time.sleep( 0.75 )
+                os.system( 'cls' if os.name == 'nt' else 'clear' ) 
 
-            print( f'>> Hello { frst_name } { last_name } !' )
-            print( '!> NOTE: write the command in the "=>" !' )
+                print( f'>> Hello { frst_name } { last_name } !' )
+                print( '!> NOTE: write the command in the "=>" !' )
             
-            break
-        else:
-            print( '!> Please enter a first name...' )
-            continue
+                break
+            else:
+                print( '!> Please enter a first name...' )
+                continue
+    except KeyboardInterrupt:
+        print( '\n-> Exiting...' )
