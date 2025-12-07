@@ -1,16 +1,12 @@
-import os
 import json
+import os
 
-def readFile(path):
-    full_path = f"data/{path}"
+def readFile( path: str ) -> dict:
+    """
+    return the data contained inside a given json file.
+    """
 
-    if not os.path.exists(full_path):
-        # Create folders if they don't exist
-        os.makedirs(os.path.dirname(full_path), exist_ok=True)
+    dir: str = os.path.join( 'data', path )
 
-        # Create empty JSON file
-        with open(full_path, "w") as f:
-            json.dump({}, f)
-
-    with open(full_path, "r") as file:
-        return json.load(file)
+    with open( dir, 'r' ) as file:
+        return json.load( file )
