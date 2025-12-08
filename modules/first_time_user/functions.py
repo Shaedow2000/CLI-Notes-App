@@ -3,6 +3,7 @@ from modules.Json.read import readFile
 from modules.Json.writeFile import changeData, writeFile
 import time
 import os
+import sys
 
 def check_first_time() -> bool:
     """
@@ -53,3 +54,6 @@ def add_user():
                 continue
     except KeyboardInterrupt:
         print( '\n-> Exiting...' )
+        time.sleep( 0.5 )
+        sys.exit( 1 )
+        
