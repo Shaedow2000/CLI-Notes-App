@@ -1,7 +1,7 @@
 import os
 
 dir: str = os.path.dirname( __file__ )
-dir = dir.replace( 'global_py/variables', '' )
+dir = os.path.dirname( os.path.dirname( dir ) ) 
 
 json_file: str = os.path.join( dir, 'user', 'userInfo.json' )
 json_file_dir: str = os.path.join( dir, json_file )
