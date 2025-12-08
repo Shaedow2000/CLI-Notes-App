@@ -8,60 +8,50 @@ A simple yet great CLI app for taking notes made in Python.
 ## Installation:
 1. Clone the repo:
 Open your **Terminal** or **CMD**, then type:
-`git clone https://github.com/Shaedow2000/CLI-Notes-App.git`
-2. Change directory:
-Go to the directory of the cloned repo. It's name is ==CLI-Notes-App==:
-`cd CLI-Notes-App`
-3. Run the setup script:
-Now the final step is to run the setup file. Named ==setup.py==:
+
+```bash
+git clone https://github.com/Shaedow2000/CLI-Notes-App.git
+```
+
+3. Change directory:
+Go to the directory of the cloned repo. It's name is **CLI-Notes-App**:
+
+```bash
+cd CLI-Notes-App
+```
+
+4. Run the setup script:
+Now the final step is to run the setup file. Named **setup.py**:
 **Linux / MacOS**:
-`sudo python setup.py`
+
+```bash
+sudo python setup.py
+```
+
 > [!IMPORTANT]
 > RUN THE PROGRAM AS **SUDO** IF YOU USE LINUX OR MACOS.
+
 **Windows**:
-`python setup.py`
+
+```bash
+python setup.py
+```
+
 4. Run the app:
 Now you're all set to go !
 - Just type the name of the command in the **Terminal** or **CMD**, and the program will start:
-`pynotes`
-## Project Structure:
-> CLI-Notes-App
-├── LICENSE
-├── README.md
-├── data
-│   ├── __init__.py
-│   ├── global_py
-│   │   ├── __init__.py
-│   │   └── variables
-│   │       ├── __init__.py
-│   │       └── vars.py
-│   └── user
-│       ├── userInfo.json
-│       └── userInfo.test.json
-├── main.py
-├── modules
-│   ├── Json
-│   │   ├── __init__.py
-│   │   ├── read.py
-│   │   └── writeFile.py
-│   ├── __init__.py
-│   ├── first_time_user
-│   │   ├── __init__.py
-│   │   └── functions.py
-│   └── functions
-│       ├── __init__.py
-│       ├── create_note.py
-│       ├── delete_note.py
-│       ├── read_note.py
-│       └── show_notes.py
-└── setup.py
+
+```bash
+pynotes
+```
 
 ## Usage:
 - Commands that are in use are:
 > q: quit | 1: create note | 2: read note | 3: show all | 4: delete note | c: clear screen
+
 - When you launch the app it will ask you to enter your first name, the last name is optional.
 - After that, the app starts and you can write the symbol of the command and start creating notes.
-- All the commands should be writen in the ==**==>**==.
+- All the commands should be writen in the **==>***.
 ## Global Variables:
 Global variables are found in *data/global_py/variables/vars.py*.
 
@@ -76,23 +66,51 @@ Global variables are found in *data/global_py/variables/vars.py*.
 To contribute to the project, just fork a copy of the project, and create your own brach.
 ### Fork:
 Fork the project:
-`git clone https://github.com/Shaedow2000/CLI-Notes-App.git`
+
+```bash
+git clone https://github.com/Shaedow2000/CLI-Notes-App.git
+```
+
 ### Create your own branch:
 Create the branch by using:
-`git checkout -b branch-name`
+
+```bash
+git checkout -b branch-name
+```
+
 ### Set the environement:
 Start the python venv:
 **Linux / MacOS**:
-`python3 -m venv .venv`
+
+```bash
+python3 -m venv .venv
+```
+
 - then:
-`source venv/bin/activate`
+
+```bash
+source venv/bin/activate
+```
+
 **Windows**:
-`python -m venv venv`
+
+```bash
+python -m venv venv
+```
+
 -then:
 *CMD*:
-`venv\Scripts\activate.bat`
+
+```bash
+venv\Scripts\activate.bat
+```
+
 *PowerShell*:
-`venv\Scripts\Activate.ps1`
+
+```bash
+venv\Scripts\Activate.ps1
+```
+
 ### Start:
 Now just start coding !
 
