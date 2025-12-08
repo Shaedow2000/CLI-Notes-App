@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 # imports from Module/ directory
-from modules.Json.read import readFile
 from modules.first_time_user.functions import add_user, check_first_time
 from data.global_py.variables import menu
 from modules.functions.create_note import create_note
