@@ -9,7 +9,7 @@ def writeFile( path: str, data: dict ) -> None:
     """
     write to a json file of a given path.
     """
-    with open( f'data/{ path }', 'w' ) as file:
+    with open( path, 'w' ) as file:
         json.dump( data, file, indent=4 )
         return
     

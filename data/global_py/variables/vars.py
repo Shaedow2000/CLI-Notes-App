@@ -1,7 +1,9 @@
 import os
 
 dir: str = os.path.dirname( __file__ )
-json_file: str = os.path.join( 'user', 'userInfo.test.json' )
+dir = os.path.dirname( os.path.dirname( dir ) ) 
+
+json_file: str = os.path.join( dir, 'user', 'userInfo.json' )
 json_file_dir: str = os.path.join( dir, json_file )
 json_file_dir = os.path.normpath( json_file_dir )
 

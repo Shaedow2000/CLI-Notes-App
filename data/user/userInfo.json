@@ -1,6 +1,6 @@
 {
-    "first_time": false,
-    "firstname": "Amir",
-    "lastname": "Saliola",
+    "first_time": true,
+    "firstname": "",
+    "lastname": "",
     "notes": {}
 }
